@@ -1,0 +1,32 @@
+@media (min-width:400px){
+    html body{
+        background-color: rgb(40, 60, 80);
+    }
+}
+@media (max-width:800px){
+    html body h1{
+        text-align: center;
+    }
+}
+@media (orientation:landscape){
+    body article{
+        max-width: 50ch;
+    }
+}
+@media ( min-height: 200px ){
+    html body h1 {
+        background-color:orange ;
+    }
+}
+@media print{
+    body p {
+        font-family: serif;
+    }
+}
+@media (prefers-color-scheme: light) {
+    
+    html body h1 {
+        color:#111;
+        background-color: #DDD;
+    }
+}
