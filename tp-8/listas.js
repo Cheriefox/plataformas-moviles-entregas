@@ -1,9 +1,9 @@
-function invertirLista (listaNumeros){
+ function invertirLista (listaNumeros){
 let listareves = [];
 let hola;
 for(i=0;i<listaNumeros.length;i++){
     hola = listaNumeros[i];
-    listareves.unshift(hola);
+    listareves.unshift(hola); 
 }
 return listareves;
 }
@@ -30,6 +30,7 @@ function crearListaDeNumeros(inicio,final) {
 
 function ordenarDeMayorAMenor(listaDeNumeros) {
     listaDeNumeros.sort((a , b ) => { return b - a });
+    return listaDeNumeros;
 }
 
 function encontrarNumeroMayor(listaDeNumeros) {
@@ -43,9 +44,15 @@ function encontrarNumeroMayor(listaDeNumeros) {
 }
 
 function ordenarPalabrasPorLongitud(listaDePalabras) {
-    let listaordenada = [];
-    listaordenada.sort(( listaDePalabras) => a < b );
-} return listaordenada
+    listaDePalabras.sort((a,b)=>{
+        if(a.length>b.length) {
+            return -1
+        } else{
+            return 1
+        }
+    });
+    return listaDePalabras
+} 
 
 
 function encontrarPalabraMasCorta(listaDeNumeros) {
@@ -57,3 +64,29 @@ function encontrarPalabraMasCorta(listaDeNumeros) {
     }
     return LetraCorta;
 }
+
+
+function filtrarsolopositivo(listaDeNumeros) {
+    let listafiltrada = listaDeNumeros.filter((elementoActual)=>{
+        return elementoActual>0;
+    })
+    return listafiltrada
+    }
+
+function contarAprobados(listadenotas){
+    let aprobados=0;
+    for(i=0;i<listadenotas.length;i++){
+        if(listadenotas[i]>=7){
+            aprobados++;
+        }
+    }
+    return aprobados;   
+}
+
+
+function filtrarsootruthy(listaDevalores) {
+    let listafiltrada = listaDevalores.filter((elementoActual)=>{
+        return elementoActual==true;
+    })
+    return listafiltrada
+    }
