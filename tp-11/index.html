@@ -41,6 +41,7 @@
                         </button>
                     </div>
 
+                    
                     <div class="col-12 col-md-4 my-1">
                         <div class="input-group">
                         <button id="btn-texto" class="btn btn-primary" data-formato="texto">Cambiar
@@ -48,6 +49,13 @@
                             <input class="form-control" id="input-texto" type="text"> 
                         </div>
                     </div>
+
+                    <div class="col-12 col-md-4 my-1">
+                        <button id="btn-tamaño" class="btn d-block w-100 btn-primary" data-formato="tamaño">
+                            Agrandar 
+                        </button>
+                    </div>
+
 
                 </div>
             </div>
@@ -97,7 +105,7 @@
         }
 
         function funcionColor(){
-            texto.classList.toggle('text-warning')
+            texto.classList.toggle('text-primary')
             let Boton = document.querySelector('#btn-color')
             Boton.classList.toggle('active')
         }
@@ -109,6 +117,11 @@
             Boton.classList.toggle('active')
         }
 
+        function funcionTamaño(){
+        texto.classList.toggle('fs-1')
+        let Boton = document.querySelector('#btn-tamaño')
+        boton.classList.toggle('active')
+        }
         
         function handlerBoton(e) {
             const funcionBoton = e.target.dataset.formato;
@@ -128,9 +141,12 @@
                 case 'texto':
                     funcionTexto();
                     break;
+                case 'tamaño':
+                    funcionTamaño();
+                    break;
             }
         }
         document.querySelectorAll('button.btn').forEach(e => e.addEventListener('click', handlerBoton));
     </script>
 </body>
-</html>
+</html> 
