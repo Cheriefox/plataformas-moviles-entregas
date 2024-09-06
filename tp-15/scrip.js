@@ -19,7 +19,7 @@ let Movimientos = poke.moves.map((move) => move.move.name).slice(0, 4);
 Movimientos = Movimientos.join(' ');
 
     const div = document.createElement("div");
-    div.classList.add("col-4", "mb-4");  // Usamos col-4 para tener 3 columnas por fila y mb-4 para margen inferior
+    div.classList.add("col-4", "mb-4");  
     div.innerHTML = `
         <div class="card">
             <img src="${poke.sprites.other["official-artwork"].front_default}" class="card-img-top" alt="${poke.name}">
